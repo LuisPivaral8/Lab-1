@@ -1,0 +1,38 @@
+.container {
+  height: 420px;
+  width: 320px;
+  perspective: 500px;
+  position: relative;
+}
+
+/*Adjusted the image of Isaac Newton to the size of the back side by adding an Id to the image*/
+#imagen {
+  width: 320px; 
+  height: 420px;
+}
+
+.card {
+  height: 100%;
+  width: 100%;
+  position: absolute;
+  transform-style: preserve-3d;
+  transition: all 1s ease-in-out;
+}
+.card:hover {
+  
+  transform: rotateY(180deg) translate(25px,150px) rotate(360deg); /* Added a couple of transitions to make it look even cooler B)*/
+  
+}
+.card .side {
+  backface-visibility: hidden;
+  height: 100%;
+  width: 100%;
+  position: absolute;
+}
+.card .back {
+  color: black; /* I wanted to change the font color, but it didn´t seem serious, so I left them black*/
+  transform: rotateY(180deg);
+  
+background: rgb(93,193,185); /* changed the back of the card to turquoise*/
+
+}
